@@ -1,0 +1,11 @@
+.reports {
+  padding: 30px;
+}
+
+.report-card {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}

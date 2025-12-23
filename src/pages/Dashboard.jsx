@@ -2,6 +2,8 @@ import { useExpenses } from "../context/ExpenseContext";
 import ExpenseList from "../components/ExpenseList";
 import Filters from "../components/Filters";
 import { useMemo, useState } from "react";
+import "../styles/dashboard.css";
+
 
 const Dashboard = function() {
   const { expenses } = useExpenses();
@@ -17,8 +19,8 @@ const Dashboard = function() {
   }, [filteredExpenses]);
 
   return (
-    <div style={{ padding: 20 }}>
-      
+    <div style={{ padding: 20 }} className="dashboard">
+     <div className="summary">
       <Filters category={category} setCategory={setCategory} />
 
       <h3>Total: {totalAmount}</h3>
@@ -28,6 +30,7 @@ const Dashboard = function() {
       ) : (
         <ExpenseList expenses={filteredExpenses} />
       )}
+      </div>
     </div>
   );
 };

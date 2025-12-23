@@ -1,10 +1,9 @@
-const Test = function(){
+import "../styles/reports.css";
 
-
-    return(<>
-    
-    <h1>here is the test for the page</h1>
-    </>)
-}
-
-export default Test;
+<div className="reports">
+  {Object.entries(categoryTotals).map(([cat, total]) => (
+    <div key={cat} className="report-card">
+      <strong>{cat}</strong> — ₹{total}
+    </div>
+  ))}
+</div>

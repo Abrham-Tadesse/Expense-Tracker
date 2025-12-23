@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useExpenses } from "../context/ExpenseContext";
 import { useNavigate } from "react-router-dom";
+import "../styles/form.css";
+
 
 const ExpenseForm = () => {
   const { addExpense } = useExpenses();
@@ -24,7 +26,7 @@ const ExpenseForm = () => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler} className="form-container">
       <input
         placeholder="Title"
         value={title}
