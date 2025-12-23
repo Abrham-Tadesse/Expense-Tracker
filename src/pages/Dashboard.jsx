@@ -6,7 +6,7 @@ import "../styles/dashboard.css";
 
 
 const Dashboard = function() {
-  const { expenses } = useExpenses();
+  const {expenses} = useExpenses();
   const [category, setCategory] = useState("All");
 
   const filteredExpenses = useMemo(() => {
@@ -20,6 +20,8 @@ const Dashboard = function() {
 
   return (
     <div style={{ padding: 20 }} className="dashboard">
+
+
      <div className="summary">
       <Filters category={category} setCategory={setCategory} />
 

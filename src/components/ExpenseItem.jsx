@@ -8,7 +8,7 @@ const ExpenseItem = ({ expense }) => {
   return (
     <li style={{ marginBottom: 10 }} className="expense-item">
       <div>
-      <strong>{expense.title}</strong> <br /> <span>- ${expense.amount} ({expense.category})</span>
+      <strong>{expense.title}</strong> <br /> <span> Birr {expense.amount} ({expense.category})</span>
       </div>
       <button className="delete-btn"
         onClick={() => deleteExpense(expense.id)}
